@@ -36,7 +36,7 @@ function initMobileMenu() {
 //load products from JSON
 async function loadProducts() {
   try {
-    const res = await fetch("/data/products.json");
+    const res = await fetch("data/products.json");
     if (!res.ok) throw new Error("Failed to load products.json");
 
     products = await res.json();

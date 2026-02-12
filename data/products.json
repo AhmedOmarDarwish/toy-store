@@ -1,0 +1,341 @@
+[
+  {
+    "id": 1,
+    "name": "Remote Control Racing Car",
+    "price": 49.99,
+    "category": "cars",
+    "image": [
+      "assets/images/products/Remote Control Racing Car/Remote Control Racing Car-1.jpg",
+      "assets/images/products/Remote Control Racing Car/Remote Control Racing Car-2.jpg",
+      "assets/images/products/Remote Control Racing Car/Remote Control Racing Car-2.jpg"
+    ],
+    "rating": 4.5,
+    "reviews": 128,
+    "isNew": true,
+    "discount": null,
+    "description": "High-speed remote control car with 2.4GHz technology, perfect for racing enthusiasts. Features durable construction and long battery life."
+  },
+  {
+    "id": 2,
+    "name": "Princess Doll Collection",
+    "price": 34.99,
+    "category": "dolls",
+    "image": [
+      "assets/images/products/Princess Doll Collection/Princess Doll Collection-1.jpg",
+      "assets/images/products/Princess Doll Collection/Princess Doll Collection-2.jpg",
+      "assets/images/products/Princess Doll Collection/Princess Doll Collection-3.jpg",
+      "assets/images/products/Princess Doll Collection/Princess Doll Collection-4.jpg"
+    ],
+    "rating": 4.8,
+    "reviews": 256,
+    "isNew": false,
+    "discount": 15,
+    "description": "Beautiful princess doll with interchangeable outfits and accessories. Encourages imaginative play and creativity."
+  },
+  {
+    "id": 3,
+    "name": "Wooden Building Blocks Set",
+    "price": 29.99,
+    "category": "educational",
+    "image": [
+      "assets/images/products/Wooden Building Blocks Set/Wooden Building Blocks Set-1.webp",
+      "assets/images/products/Wooden Building Blocks Set/Wooden Building Blocks Set-2.jpg",
+      "assets/images/products/Wooden Building Blocks Set/Wooden Building Blocks Set-3.jpg",
+      "assets/images/products/Wooden Building Blocks Set/Wooden Building Blocks Set-4.jpg"
+    ],
+    "rating": 4.9,
+    "reviews": 312,
+    "isNew": false,
+    "discount": null,
+    "description": "100-piece wooden block set for creative construction. Made from sustainable wood with non-toxic paint."
+  },
+  {
+    "id": 4,
+    "name": "Interactive Robot Toy",
+    "price": 79.99,
+    "category": "educational",
+    "image": [
+      "assets/images/products/Interactive Robot Toy/Interactive Robot Toy-1.jpg",
+      "assets/images/products/Interactive Robot Toy/Interactive Robot Toy-2.jpg",
+      "assets/images/products/Interactive Robot Toy/Interactive Robot Toy-3.jpg",
+      "assets/images/products/Interactive Robot Toy/Interactive Robot Toy-4.jpg"
+    ],
+    "rating": 4.6,
+    "reviews": 89,
+    "isNew": true,
+    "discount": null,
+    "description": "Smart robot with voice recognition, dancing capabilities, and educational games. Perfect STEM toy for kids 6+."
+  },
+  {
+    "id": 5,
+    "name": "Classic Board Game Bundle",
+    "price": 39.99,
+    "category": "games",
+    "image": [
+      "assets/images/products/Classic Board Game Bundle/Classic Board Game Bundle-1.jpg",
+      "assets/images/products/Classic Board Game Bundle/Classic Board Game Bundle-2.jpg",
+      "assets/images/products/Classic Board Game Bundle/Classic Board Game Bundle-3.jpg",
+      "assets/images/products/Classic Board Game Bundle/Classic Board Game Bundle-3.jpg"
+    ],
+    "rating": 4.7,
+    "reviews": 445,
+    "isNew": false,
+    "discount": 20,
+    "description": "Collection of 5 classic board games for family game night. Includes chess, checkers, snakes & ladders, and more."
+  },
+  {
+    "id": 6,
+    "name": "Outdoor Adventure Kit",
+    "price": 44.99,
+    "category": "outdoor",
+    "image": [
+      "assets/images/products/Outdoor Adventure Kit/Outdoor Adventure Kit-1.jpg",
+      "assets/images/products/Outdoor Adventure Kit/Outdoor Adventure Kit-2.jpg",
+      "assets/images/products/Outdoor Adventure Kit/Outdoor Adventure Kit-3.jpg",
+      "assets/images/products/Outdoor Adventure Kit/Outdoor Adventure Kit-4.jpg"
+    ],
+    "rating": 4.4,
+    "reviews": 67,
+    "isNew": true,
+    "discount": null,
+    "description": "Complete outdoor exploration kit with binoculars, compass, magnifying glass, and bug catcher. Great for young explorers!"
+  },
+  {
+    "id": 7,
+    "name": "Art Supplies Mega Set",
+    "price": 24.99,
+    "category": "arts",
+    "image": [
+      "assets/images/products/Art Supplies Mega Set/Art Supplies Mega Set-1.jpg",
+      "assets/images/products/Art Supplies Mega Set/Art Supplies Mega Set-2.jpg",
+      "assets/images/products/Art Supplies Mega Set/Art Supplies Mega Set-3.jpg",
+      "assets/images/products/Art Supplies Mega Set/Art Supplies Mega Set-4.jpg"
+    ],
+    "rating": 4.8,
+    "reviews": 189,
+    "isNew": false,
+    "discount": 10,
+    "description": "150-piece art set including crayons, markers, colored pencils, paints, and paper. Everything your little artist needs!"
+  },
+  {
+    "id": 8,
+    "name": "Plush Teddy Bear",
+    "price": 19.99,
+    "category": "dolls",
+    "image": [
+      "assets/images/products/Plush Teddy Bear/Plush Teddy Bear-1.jpg",
+      "assets/images/products/Plush Teddy Bear/Plush Teddy Bear-2.jpg",
+      "assets/images/products/Plush Teddy Bear/Plush Teddy Bear-3.jpg",
+      "assets/images/products/Plush Teddy Bear/Plush Teddy Bear-4.jpg"
+    ],
+    "rating": 4.9,
+    "reviews": 523,
+    "isNew": false,
+    "discount": null,
+    "description": "Super soft, huggable teddy bear made with premium materials. Machine washable and perfect for cuddles."
+  },
+  {
+    "id": 9,
+    "name": "Electric Train Set",
+    "price": 89.99,
+    "category": "cars",
+    "image": [
+      "assets/images/products/Electric Train Set/Electric Train Set-1.jpg",
+      "assets/images/products/Electric Train Set/Electric Train Set-2.jpg",
+      "assets/images/products/Electric Train Set/Electric Train Set-3.jpg",
+      "assets/images/products/Electric Train Set/Electric Train Set-4.jpg"
+    ],
+    "rating": 4.7,
+    "reviews": 156,
+    "isNew": true,
+    "discount": null,
+    "description": "Complete train set with tracks, station, and multiple cars. Features realistic sounds and working headlights."
+  },
+  {
+    "id": 10,
+    "name": "Science Experiment Kit",
+    "price": 34.99,
+    "category": "educational",
+    "image": [
+      "assets/images/products/Science Experiment Kit/Science Experiment Kit-1.jpg",
+      "assets/images/products/Science Experiment Kit/Science Experiment Kit-2.jpg",
+      "assets/images/products/Science Experiment Kit/Science Experiment Kit-3.jpg",
+      "assets/images/products/Science Experiment Kit/Science Experiment Kit-4.jpg"
+    ],
+    "rating": 4.6,
+    "reviews": 234,
+    "isNew": false,
+    "discount": 15,
+    "description": "50+ exciting science experiments for kids. Includes all materials and detailed instruction manual."
+  },
+  {
+    "id": 11,
+    "name": "Soccer Goal Set",
+    "price": 59.99,
+    "category": "outdoor",
+    "image": [
+      "assets/images/products/Soccer Goal Set/Soccer Goal Set-1.jpg",
+      "assets/images/products/Soccer Goal Set/Soccer Goal Set-2.jpg",
+      "assets/images/products/Soccer Goal Set/Soccer Goal Set-3.jpg",
+      "assets/images/products/Soccer Goal Set/Soccer Goal Set-4.jpg"
+    ],
+    "rating": 4.5,
+    "reviews": 98,
+    "isNew": false,
+    "discount": null,
+    "description": "Portable soccer goal with ball and pump. Easy to set up in backyard or park for hours of active play."
+  },
+  {
+    "id": 12,
+    "name": "Puzzle Master Collection",
+    "price": 22.99,
+    "category": "games",
+    "image": [
+      "assets/images/products/Puzzle Master Collection/Puzzle Master Collection-1.webp",
+      "assets/images/products/Puzzle Master Collection/Puzzle Master Collection-2.webp",
+      "assets/images/products/Puzzle Master Collection/Puzzle Master Collection-3.webp",
+      "assets/images/products/Puzzle Master Collection/Puzzle Master Collection-4.webp"
+    ],
+    "rating": 4.8,
+    "reviews": 167,
+    "isNew": false,
+    "discount": null,
+    "description": "5 challenging puzzles ranging from 100 to 1000 pieces. Beautiful designs suitable for all ages."
+  },
+  {
+    "id": 13,
+    "name": "Kids Electric Scooter",
+    "price": 129.99,
+    "category": "outdoor",
+    "image": [
+      "assets/images/products/Kids Electric Scooter/Kids Electric Scooter-1.jpg",
+      "assets/images/products/Kids Electric Scooter/Kids Electric Scooter-2.jpg",
+      "assets/images/products/Kids Electric Scooter/Kids Electric Scooter-3.jpg",
+      "assets/images/products/Kids Electric Scooter/Kids Electric Scooter-4.jpg"
+    ],
+    "rating": 4.6,
+    "reviews": 142,
+    "isNew": true,
+    "discount": 10,
+    "description": "Safe electric scooter for kids with adjustable height and rechargeable battery. Perfect for outdoor fun."
+  },
+  {
+    "id": 14,
+    "name": "Magnetic Tiles Building Set",
+    "price": 49.99,
+    "category": "educational",
+    "image": [
+      "assets/images/products/Magnetic Tiles Building Set/Magnetic Tiles Building Set-1.jpg",
+      "assets/images/products/Magnetic Tiles Building Set/Magnetic Tiles Building Set-2.jpg",
+      "assets/images/products/Magnetic Tiles Building Set/Magnetic Tiles Building Set-3.jpg",
+      "assets/images/products/Magnetic Tiles Building Set/Magnetic Tiles Building Set-4.jpg"
+    ],
+    "rating": 4.9,
+    "reviews": 301,
+    "isNew": false,
+    "discount": null,
+    "description": "Colorful magnetic tiles that snap together easily to build creative 3D shapes and structures."
+  },
+  {
+    "id": 15,
+    "name": "Kids Kitchen Play Set",
+    "price": 69.99,
+    "category": "dolls",
+    "image": [
+      "assets/images/products/Kids Kitchen Play Set/Kids Kitchen Play Set-1.jpg",
+      "assets/images/products/Kids Kitchen Play Set/Kids Kitchen Play Set-2.jpg",
+      "assets/images/products/Kids Kitchen Play Set/Kids Kitchen Play Set-3.jpg",
+      "assets/images/products/Kids Kitchen Play Set/Kids Kitchen Play Set-4.jpg"
+    ],
+    "rating": 4.7,
+    "reviews": 215,
+    "isNew": true,
+    "discount": null,
+    "description": "Interactive kitchen play set with lights and sounds. Includes utensils and play food for role-playing fun."
+  },
+  {
+    "id": 16,
+    "name": "Mini Basketball Hoop",
+    "price": 27.99,
+    "category": "outdoor",
+    "image": [
+      "assets/images/products/Mini Basketball Hoop/Mini Basketball Hoop-1.jpg",
+      "assets/images/products/Mini Basketball Hoop/Mini Basketball Hoop-2.jpg",
+      "assets/images/products/Mini Basketball Hoop/Mini Basketball Hoop-3.jpg",
+      "assets/images/products/Mini Basketball Hoop/Mini Basketball Hoop-4.jpg"
+    ],
+    "rating": 4.4,
+    "reviews": 84,
+    "isNew": false,
+    "discount": 5,
+    "description": "Indoor mini basketball hoop with soft ball. Easy to mount on door for quick fun and exercise."
+  },
+  {
+    "id": 17,
+    "name": "Remote Control Helicopter",
+    "price": 59.99,
+    "category": "cars",
+    "image": [
+      "assets/images/products/Remote Control Helicopter/Remote Control Helicopter-1.webp",
+      "assets/images/products/Remote Control Helicopter/Remote Control Helicopter-2.jpg",
+      "assets/images/products/Remote Control Helicopter/Remote Control Helicopter-3.jpg",
+      "assets/images/products/Remote Control Helicopter/Remote Control Helicopter-4.jpg"
+    ],
+    "rating": 4.3,
+    "reviews": 63,
+    "isNew": false,
+    "discount": null,
+    "description": "Easy-to-fly remote control helicopter with stable flight control. Great gift for beginners."
+  },
+  {
+    "id": 18,
+    "name": "Kids Story Books Set",
+    "price": 19.99,
+    "category": "educational",
+    "image": [
+      "assets/images/products/Kids Story Books Set/Kids Story Books Set-1.jpg",
+      "assets/images/products/Kids Story Books Set/Kids Story Books Set-2.jpg",
+      "assets/images/products/Kids Story Books Set/Kids Story Books Set-3.jpg",
+      "assets/images/products/Kids Story Books Set/Kids Story Books Set-4.jpg"
+    ],
+    "rating": 4.9,
+    "reviews": 402,
+    "isNew": false,
+    "discount": 20,
+    "description": "Set of 10 colorful story books that help improve reading skills and imagination for young kids."
+  },
+  {
+    "id": 19,
+    "name": "Bubble Machine Toy",
+    "price": 14.99,
+    "category": "outdoor",
+    "image": [
+      "assets/images/products/Bubble Machine Toy/Bubble Machine Toy-1.jpg",
+      "assets/images/products/Bubble Machine Toy/Bubble Machine Toy-2.jpg",
+      "assets/images/products/Bubble Machine Toy/Bubble Machine Toy-3.jpg",
+      "assets/images/products/Bubble Machine Toy/Bubble Machine Toy-4.jpg"
+    ],
+    "rating": 4.5,
+    "reviews": 176,
+    "isNew": true,
+    "discount": null,
+    "description": "Automatic bubble machine that creates hundreds of bubbles per minute. Fun for parties and outdoor play."
+  },
+  {
+    "id": 20,
+    "name": "Kids Drum Set",
+    "price": 54.99,
+    "category": "arts",
+    "image": [
+      "assets/images/products/Kids Drum Set/Kids Drum Set-1.webp",
+      "assets/images/products/Kids Drum Set/Kids Drum Set-2.webp",
+      "assets/images/products/Kids Drum Set/Kids Drum Set-3.webp",
+      "assets/images/products/Kids Drum Set/Kids Drum Set-4.webp"
+    ],
+    "rating": 4.6,
+    "reviews": 91,
+    "isNew": false,
+    "discount": 10,
+    "description": "Mini drum set for kids to explore music and rhythm. Includes sticks and adjustable stool."
+  }
+]

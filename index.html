@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToyLand - Magical Toys for Every Child</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <link rel="shortcut icon" href="/assets/images/logo/Logo.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .swiper-pagination-bullet-active {
+        background: #ff6b6b !important;
+      }
+      .fade-in {
+        animation: fadeIn 0.5s ease-in;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .bounce-hover:hover {
+        animation: bounce 0.5s;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+  >
+    <!-- Navigation -->
+    <nav
+      class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20">
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center"
+              >
+                <span class="text-white text-2xl">🧸</span>
+              </div>
+              <span class="text-2xl font-bold text-gray-800 dark:text-white"
+                >ToyLand</span
+              >
+            </a>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="text-primary font-semibold">Home</a>
+            <a
+              href="products.html"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary transition"
+              >Shop</a
+            >
+            <a
+              href="#categories"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary transition"
+              >Categories</a
+            >
+            <a
+              href="#footer"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary transition"
+              >About</a
+            >
+          </div>
+
+          <div class="hidden md:flex items-center space-x-4">
+            <button
+              id="themeToggle"
+              class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+            >
+              <span id="themeIcon">🌙</span>
+            </button>
+            <a
+              href="cart.html"
+              class="relative p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition"
+            >
+              <svg
+                class="w-6 h-6 text-gray-600 dark:text-gray-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+              <span
+                id="cartCount"
+                class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden"
+                >0</span
+              >
+            </a>
+            <div id="authButtons" class="flex items-center space-x-2">
+              <a
+                href="login.html"
+                class="px-4 py-2 text-primary border-2 border-primary rounded-full hover:bg-primary hover:text-white transition"
+                >Login</a
+              >
+              <a
+                href="register.html"
+                class="px-4 py-2 bg-primary text-white rounded-full hover:bg-red-500 transition"
+                >Sign Up</a
+              >
+            </div>
+            <div id="userMenu" class="hidden flex items-center space-x-2">
+              <a
+                href="profile.html"
+                class="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-primary"
+              >
+                <div
+                  class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-white font-bold"
+                  id="userAvatar"
+                >
+                  
+                </div>
+                <span id="userName">User</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center space-x-4">
+            <a href="cart.html" class="relative p-2">
+              <svg
+                class="w-6 h-6 text-gray-600 dark:text-gray-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+              <span
+                id="cartCountMobile"
+                class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden"
+                >0</span
+              >
+            </a>
+            <button
+              id="mobileMenuBtn"
+              class="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-primary"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="index.html"
+            class="block px-3 py-2 text-primary font-semibold"
+            >Home</a
+          >
+          <a
+            href="products.html"
+            class="block px-3 py-2 text-gray-600 dark:text-gray-300"
+            >Shop</a
+          >
+          <a
+            href="#categories"
+            class="block px-3 py-2 text-gray-600 dark:text-gray-300"
+            >Categories</a
+          >
+          <div id="mobileAuthButtons" class="space-y-2 mt-4 px-3">
+            <a
+              href="login.html"
+              class="block text-center px-4 py-2 text-primary border-2 border-primary rounded-full"
+              >Login</a
+            >
+            <a
+              href="register.html"
+              class="block text-center px-4 py-2 bg-primary text-white rounded-full"
+              >Sign Up</a
+            >
+          </div>
+          <div id="mobileUserMenu" class="hidden mt-4 px-3">
+            <a
+              href="profile.html"
+              class="block px-3 py-2 text-gray-600 dark:text-gray-300"
+              >My Profile</a
+            >
+            <button
+              onclick="logout()"
+              class="block w-full text-left px-3 py-2 text-red-500"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="relative overflow-hidden bg-gradient-to-br from-blue-50 to-pink-50 dark:from-gray-800 dark:to-gray-900 py-20"
+    >
+      <!-- Bubbles -->
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div
+          class="absolute top-10 left-10 w-20 h-20 bg-yellow-300 rounded-full opacity-20 animate-pulse"
+        ></div>
+        <div
+          class="absolute top-40 right-20 w-32 h-32 bg-primary rounded-full opacity-10 animate-bounce"
+        ></div>
+        <div
+          class="absolute bottom-20 left-1/4 w-16 h-16 bg-secondary rounded-full opacity-20 animate-pulse"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="fade-in">
+            <span
+              class="inline-block px-4 py-1 bg-accent text-dark rounded-full text-sm font-bold mb-4"
+              >✨ New Collection 2026</span
+            >
+            <h1
+              class="text-5xl md:text-6xl font-bold text-gray-800 dark:text-white mb-6 leading-tight"
+            >
+              Bring Joy to Your <span class="text-primary">Little Ones</span>
+            </h1>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+              Discover magical toys that spark imagination, creativity, and
+              endless fun. Quality toys for every age, delivered with love.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="products.html"
+                class="px-8 py-4 bg-primary text-white rounded-full font-bold text-lg hover:bg-red-500 transform hover:scale-105 transition shadow-lg text-center"
+              >
+                Shop Now 🛍️
+              </a>
+              <a
+                href="#categories"
+                class="px-8 py-4 bg-white dark:bg-gray-700 text-gray-800 dark:text-white rounded-full font-bold text-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition text-center"
+              >
+                Explore Categories
+              </a>
+            </div>
+            <div
+              class="mt-8 flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400"
+            >
+              <span class="flex items-center">✓ Free Shipping over $50</span>
+              <span class="flex items-center">✓ 30-Day Returns</span>
+              <span class="flex items-center">✓ Safe & Secure</span>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div
+              class="relative z-10 transform hover:scale-105 transition duration-500"
+            >
+              <img
+                src="assets/images/hero-section/Happy child with toys.jfif"
+                alt="Happy child with toys"
+                class="rounded-3xl shadow-2xl w-full object-cover h-[500px]"
+              />
+            </div>
+            <div
+              class="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-xl z-20 bounce-hover"
+            >
+              <div class="flex items-center space-x-3">
+                <div
+                  class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-2xl"
+                >
+                  ⭐
+                </div>
+                <div>
+                  <p class="font-bold text-gray-800 dark:text-white">
+                    4.9/5 Rating
+                  </p>
+                  <p class="text-sm text-gray-500">From 10k+ Parents</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section
+      id="categories"
+      class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+            Shop by Category
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Find the perfect toys for every interest and age group
+          </p>
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <a href="products.html?category=cars" class="group">
+            <div
+              class="bg-blue-50 dark:bg-gray-700 rounded-2xl p-6 text-center transition transform hover:scale-105 hover:shadow-xl"
+            >
+              <div class="text-5xl mb-3 group-hover:animate-bounce">🚗</div>
+              <h3 class="font-bold text-gray-800 dark:text-white">Cars</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                120+ Items
+              </p>
+            </div>
+          </a>
+          <a href="products.html?category=dolls" class="group">
+            <div
+              class="bg-pink-50 dark:bg-gray-700 rounded-2xl p-6 text-center transition transform hover:scale-105 hover:shadow-xl"
+            >
+              <div class="text-5xl mb-3 group-hover:animate-bounce">🎎</div>
+              <h3 class="font-bold text-gray-800 dark:text-white">Dolls</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                85+ Items
+              </p>
+            </div>
+          </a>
+          <a href="products.html?category=educational" class="group">
+            <div
+              class="bg-green-50 dark:bg-gray-700 rounded-2xl p-6 text-center transition transform hover:scale-105 hover:shadow-xl"
+            >
+              <div class="text-5xl mb-3 group-hover:animate-bounce">🧩</div>
+              <h3 class="font-bold text-gray-800 dark:text-white">
+                Educational
+              </h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                200+ Items
+              </p>
+            </div>
+          </a>
+          <a href="products.html?category=games" class="group">
+            <div
+              class="bg-purple-50 dark:bg-gray-700 rounded-2xl p-6 text-center transition transform hover:scale-105 hover:shadow-xl"
+            >
+              <div class="text-5xl mb-3 group-hover:animate-bounce">🎲</div>
+              <h3 class="font-bold text-gray-800 dark:text-white">Games</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                150+ Items
+              </p>
+            </div>
+          </a>
+          <a href="products.html?category=outdoor" class="group">
+            <div
+              class="bg-yellow-50 dark:bg-gray-700 rounded-2xl p-6 text-center transition transform hover:scale-105 hover:shadow-xl"
+            >
+              <div class="text-5xl mb-3 group-hover:animate-bounce">⚽</div>
+              <h3 class="font-bold text-gray-800 dark:text-white">Outdoor</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                90+ Items
+              </p>
+            </div>
+          </a>
+          <a href="products.html?category=arts" class="group">
+            <div
+              class="bg-red-50 dark:bg-gray-700 rounded-2xl p-6 text-center transition transform hover:scale-105 hover:shadow-xl"
+            >
+              <div class="text-5xl mb-3 group-hover:animate-bounce">🎨</div>
+              <h3 class="font-bold text-gray-800 dark:text-white">
+                Arts & Crafts
+              </h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                110+ Items
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section
+      class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-end mb-12">
+
+          <!-- Left -->
+          <div>
+            <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+              Featured Toys
+            </h2>
+            <p class="text-gray-600 dark:text-gray-300">
+              Handpicked favorites loved by kids and parents
+            </p>
+          </div>
+
+          <!-- Right -->
+          <a
+            href="products.html"
+            class="hidden md:flex items-center text-primary font-semibold hover:underline"
+          >
+            View All
+            <svg
+              class="w-5 h-5 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Products -->
+        <div
+          id="featuredProducts"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          <!-- Products injected by JS -->
+        </div>
+
+        <!-- View All Button for Mobile -->
+        <div class="mt-12 text-center md:hidden">
+          <a
+            href="products.html"
+            class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-full font-semibold hover:bg-red-500 transition"
+          >
+            View All Products
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands Slider -->
+    <section
+      class="py-16 bg-white dark:bg-gray-800 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3
+          class="text-center text-gray-500 dark:text-gray-400 font-semibold mb-8 uppercase tracking-wide"
+        >
+          Trusted by Leading Brands
+        </h3>
+        <div class="swiper brandsSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex items-center justify-center">
+              <div
+                class="text-3xl font-bold text-gray-400 hover:text-primary transition"
+              >
+                LEGO®
+              </div>
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <div
+                class="text-3xl font-bold text-gray-400 hover:text-primary transition"
+              >
+                Mattel
+              </div>
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <div
+                class="text-3xl font-bold text-gray-400 hover:text-primary transition"
+              >
+                Hasbro
+              </div>
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <div
+                class="text-3xl font-bold text-gray-400 hover:text-primary transition"
+              >
+                Fisher-Price
+              </div>
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <div
+                class="text-3xl font-bold text-gray-400 hover:text-primary transition"
+              >
+                Barbie®
+              </div>
+            </div>
+            <div class="swiper-slide flex items-center justify-center">
+              <div
+                class="text-3xl font-bold text-gray-400 hover:text-primary transition"
+              >
+                Hot Wheels
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section
+      class="py-20 bg-gradient-to-r from-primary/5 to-secondary/5 dark:from-gray-800 dark:to-gray-900 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+            What Parents Say
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300">
+            Real reviews from our happy customers
+          </p>
+        </div>
+
+        <div class="swiper testimonialSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg mx-4"
+              >
+                <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  "The quality of toys is amazing! My kids absolutely love their
+                  new educational games. Fast shipping too!"
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="https://i.pravatar.cc/150?img=1"
+                    alt="Sarah"
+                    class="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <h4 class="font-bold text-gray-800 dark:text-white">
+                      Sarah Johnson
+                    </h4>
+                    <p class="text-sm text-gray-500">Mom of 2</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg mx-4"
+              >
+                <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  "Best toy store online! Great prices, excellent customer
+                  service, and the dark mode is perfect for late-night
+                  shopping."
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="https://i.pravatar.cc/150?img=2"
+                    alt="Mike"
+                    class="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <h4 class="font-bold text-gray-800 dark:text-white">
+                      Mike Chen
+                    </h4>
+                    <p class="text-sm text-gray-500">Dad of 3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg mx-4"
+              >
+                <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  "I love the variety of educational toys. My daughter has
+                  learned so much while having fun. Highly recommend!"
+                </p>
+                <div class="flex items-center">
+                  <img
+                    src="https://i.pravatar.cc/150?img=3"
+                    alt="Emma"
+                    class="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <h4 class="font-bold text-gray-800 dark:text-white">
+                      Emma Davis
+                    </h4>
+                    <p class="text-sm text-gray-500">Teacher & Mom</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination mt-8"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-20 bg-primary">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-white mb-4">
+          Join Our Toy Club! 🎉
+        </h2>
+        <p class="text-white/90 mb-8 text-lg">
+          Get 20% off your first order and exclusive access to new arrivals and
+          special deals.
+        </p>
+        <form
+          id="newsletterForm"
+          class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto"
+        >
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            class="flex-1 px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-white/30"
+          />
+          <button
+            type="submit"
+            class="px-8 py-4 bg-dark text-white rounded-full font-bold hover:bg-gray-800 transition transform hover:scale-105"
+          >
+            Subscribe
+          </button>
+        </form>
+        <p class="text-white/70 text-sm mt-4">
+          No spam, unsubscribe anytime. We respect your privacy.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-dark text-white pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center"
+              >
+                <span class="text-white text-2xl">🧸</span>
+              </div>
+              <span class="text-2xl font-bold">ToyLand</span>
+            </div>
+            <p class="text-gray-400 mb-4">
+              Bringing joy and imagination to children worldwide with quality
+              toys and exceptional service.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition"
+                >📘</a
+              >
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition"
+                >📸</a
+              >
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition"
+                >🐦</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="index.html" class="hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="hover:text-white transition"
+                  >Shop All</a
+                >
+              </li>
+              <li>
+                <a href="#categories" class="hover:text-white transition"
+                  >Categories</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-4">Customer Service</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="#" class="hover:text-white transition"
+                  >Shipping Info</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition"
+                  >Returns & Exchanges</a
+                >
+              </li>
+              <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+              <li>
+                <a href="#" class="hover:text-white transition">Track Order</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-center">
+                📍 123 Toy Street, Play City, PC 12345
+              </li>
+              <li class="flex items-center">📞 3-800-800-500</li>
+              <li class="flex items-center">✉️ hello@toyland.com</li>
+              <li class="flex items-center">🕒 Mon-Fri: 9AM - 6PM EST</li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            &copy; 2026 ToyLand. All rights reserved | Designed by (Ahmed Omar Darwish).
+          </p>
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <span class="text-2xl">💳</span>
+            <span class="text-2xl">💳</span>
+            <span class="text-2xl">💳</span>
+            <span class="text-2xl">💳</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

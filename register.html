@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - ToyLand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+        <link rel="shortcut icon" href="/assets/images/logo/Logo.png" type="image/x-icon">
+
+    <script src="tailwind-config.js"></script>
+  </head>
+  <body
+    class="font-sans bg-gradient-to-br from-blue-50 to-pink-50 dark:from-gray-900 dark:to-gray-800 min-h-screen flex items-center justify-center p-4"
+  >
+    <div class="w-full max-w-md">
+      <div class="text-center mb-8">
+        <a href="index.html" class="inline-flex items-center space-x-2">
+          <div
+            class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg"
+          >
+            <span class="text-white text-3xl">🧸</span>
+          </div>
+        </a>
+        <h1 class="text-3xl font-bold text-gray-800 dark:text-white mt-4">
+          Join ToyLand! 🎉
+        </h1>
+        <p class="text-gray-600 dark:text-gray-300">
+          Create your account and start shopping
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8">
+        <form id="registerForm" class="space-y-4">
+          <div>
+            <label
+              class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              id="fullName"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition"
+              placeholder="John Doe"
+            />
+            <p id="nameError" class="text-red-500 text-sm mt-1 hidden">
+              Name must be at least 2 characters
+            </p>
+          </div>
+
+          <div>
+            <label
+              class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition"
+              placeholder="you@example.com"
+            />
+            <p id="emailError" class="text-red-500 text-sm mt-1 hidden">
+              Please enter a valid email
+            </p>
+          </div>
+
+          <div>
+            <label
+              class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+              >Password</label
+            >
+            <div class="relative">
+              <input
+                type="password"
+                id="password"
+                required
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition"
+                placeholder="Min 6 characters"
+              />
+              <button
+                type="button"
+                onclick="togglePassword('password')"
+                class="absolute right-3 top-3.5 text-gray-400 hover:text-gray-600"
+              >
+                👁️
+              </button>
+            </div>
+            <p id="passwordError" class="text-red-500 text-sm mt-1 hidden">
+              Password must be at least 6 characters
+            </p>
+          </div>
+
+          <div>
+            <label
+              class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              id="confirmPassword"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition"
+              placeholder="Confirm your password"
+            />
+            <p id="confirmError" class="text-red-500 text-sm mt-1 hidden">
+              Passwords do not match
+            </p>
+          </div>
+
+          <div class="flex items-center">
+            <input
+              type="checkbox"
+              id="terms"
+              required
+              class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+            />
+            <span class="ml-2 text-sm text-gray-600 dark:text-gray-300"
+              >I agree to the
+              <a href="#" class="text-primary hover:underline">Terms</a> and
+              <a href="#" class="text-primary hover:underline"
+                >Privacy Policy</a
+              ></span
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-4 bg-primary text-white rounded-xl font-bold text-lg hover:bg-red-500 transition transform hover:scale-105 shadow-lg"
+          >
+            Create Account
+          </button>
+        </form>
+
+        <div class="mt-6 text-center">
+          <p class="text-gray-600 dark:text-gray-300">
+            Already have an account?
+            <a
+              href="login.html"
+              class="text-primary font-semibold hover:underline"
+              >Sign in</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", handleRegister);
+    </script>
+  </body>
+</html>

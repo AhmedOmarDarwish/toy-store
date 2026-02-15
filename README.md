@@ -1,6 +1,6 @@
 # ToyLand - E-Commerce Toy Store
 
-Live Demo: 👉 https://ahmedomardarwish.github.io/toy-store/  
+Live Demo: 👉 https://ahmedomardarwish.github.io/ToyLand/
 
 A complete, responsive e-commerce website for a toy store built with **HTML5**, **TailwindCSS**, and **Vanilla JavaScript**.
 
